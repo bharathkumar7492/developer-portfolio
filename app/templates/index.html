@@ -1,0 +1,344 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    
+<!-- Home Section -->
+<section id="home" class="container py-5">
+    <div class="row align-items-center min-vh-75">
+
+        <!-- Left Side: Introduction -->
+        <div class="col-lg-7 text-center text-lg-start">
+
+            <p class="text-primary fw-semibold">
+                HELLO, I'M
+            </p>
+
+            <h1 class="display-4 fw-bold">
+                Bharathkumar Ravi
+            </h1>
+
+            <h3 class="text-primary mb-3">
+                Python Backend Developer
+            </h3>
+
+            <p class="text-secondary fs-5">
+                MBA graduate transitioning into software development.
+                I enjoy building backend applications using Python,
+                FastAPI and MySQL.
+            </p>
+
+            <div class="mt-4">
+                <a href="#projects" class="btn btn-primary me-2">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline-dark">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Right Side: Profile Image -->
+        <div class="col-lg-5 text-center mt-5 mt-lg-0">
+
+            <img src="https://picsum.photos/400/200"
+                 alt="Bharathkumar Ravi"
+                 class="img-fluid rounded-circle shadow"
+                 style="width: 350px; height: 350px; object-fit: cover;">
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- About Me Section -->
+<section id="about" class="bg-body-tertiary py-5">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">About Me</h2>
+            <p class="text-secondary">Get to know me</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+
+                <p>
+                    I'm an MBA graduate with a strong interest in
+                    software development. After completing my
+                    education, I started learning programming and
+                    developing practical applications using Python.
+                </p>
+
+                <p>
+                    I have hands on experience building backend
+                    applications using Python, FastAPI, MySQL and
+                    SQLAlchemy. I have also worked on projects
+                    involving REST APIs, CRUD operations and
+                    authentication.
+                </p>
+
+                <p>
+                    I'm currently looking for entry level
+                    Python Backend Developer or Software Developer
+                    opportunities where I can contribute, learn
+                    and grow as a developer.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- Skills Section -->
+<section id="skills" class="container py-5">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Technical Skills</h2>
+        <p class="text-secondary">Technologies and tools I work with</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Programming -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Programming</h5>
+                    <p> Python</p>
+                    <p> OOP Concepts</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Backend</h5>
+                    <p>FastAPI</p>
+                    <p>REST APIs</p>
+                    <p>SQLAlchemy</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Database</h5>
+                    <p>MySQL</p>
+                    <p>SQL</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frontend & Tools -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title">Frontend & Tools</h5>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Bootstrap 5</p>
+                    <p>Git & GitHub</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="bg-body-tertiary py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">My Projects</h2>
+            <p class="text-secondary">Some applications I've developed</p>
+        </div>
+
+        <div class="row g-4">
+
+            {% for project in projects %}
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+
+                        <h5 class="card-title fw-bold">
+                            {{ project.name }}
+                        </h5>
+
+                        <p class="card-text">
+                            {{ project.description }}
+                        </p>
+
+                        <p class="text-primary small">
+                            {{ project.technologies }}
+                        </p>
+
+                        <a href="{{ project.github }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-outline-primary btn-sm">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- Education Section -->
+<section id="education" class="container py-5">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Education</h2>
+        <p class="text-secondary">My academic background</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="fw-bold">Master of Business Administration (MBA)</h5>
+                    <p class="text-primary mb-1">2022 - 2024</p>
+                    <p>K.S.R College of Engineering</p>
+                    <p class="text-secondary">Anna University</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="fw-bold">Bachelor of Business Administration (BBA)</h5>
+                    <p class="text-primary mb-1">2019 - 2022</p>
+                    <p>K.S.R College of Arts & Science</p>
+                    <p class="text-secondary">Periyar University</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="fw-bold">Python Full Stack Development</h5>
+                    <p class="text-primary mb-1">Technical Training</p>
+                    <p>QSpiders, Vadapalani, Chennai</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Resume Section -->
+<section id="resume" class="bg-body-tertiary py-5">
+
+    <div class="container text-center">
+
+        <h2 class="fw-bold mb-3">My Resume</h2>
+
+        <p class="text-secondary mb-4">
+            Interested in my profile? Download my resume
+            to explore my technical skills and projects.
+        </p>
+
+        <a href="/static/resume/Bharathkumar_resume.pdf"
+           class="btn btn-primary"
+           download>
+            <i class="bi bi-download"></i>
+            Download Resume
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="container py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Get In Touch</h2>
+        <p class="text-secondary">
+            Have an opportunity or want to connect? Feel free to contact me.
+        </p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            
+            {% if success == "1" %}
+            <div class="alert alert-success" role="alert">
+                Your message has been submitted successfully.
+            </div>
+            {% endif %}
+
+            {% if error == "1" %}
+            <div class="alert aler -success" role="alert">
+                Please fill in all fields before submitting.
+            </div>
+            {% endif %}
+
+            <form action="/contact" method="post">
+
+                <div class="mb-3">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" name="name"
+                           class="form-control"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" name="email"
+                           class="form-control"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea name="message"
+                              class="form-control"
+                              rows="5"
+                              placeholder="Write your message"
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

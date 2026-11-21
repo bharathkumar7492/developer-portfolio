@@ -1,0 +1,2 @@
+FastAPI requires python-multipart to process HTML form submissions using Form(...).
+pip install python-multipart

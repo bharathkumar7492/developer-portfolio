@@ -1,0 +1,71 @@
+
+:root {
+    --primary-color: #2563EB;
+    --accent-color: #4F46E5;
+    --heading-color: #1E293B;
+    --text-color: #64748B;
+    --light-bg: #F8FAFC;
+}
+
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: var(--heading-color);
+}
+
+/* Section headings */
+h1, h2, h3, h4, h5 {
+    color: var(--heading-color);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Project and skill cards */
+.card {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.10);
+}
+
+/* Section backgrounds */
+.bg-body-tertiary {
+    background-color: var(--light-bg) !important;
+}
+
+/* Navigation */
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Profile image */
+.profile-image {
+    border: 5px solid #DBEAFE;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.12);
+}
