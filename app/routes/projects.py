@@ -15,12 +15,21 @@ projects = [
         "technologies": "Python | FastAPI | MySQL | SQLAlchemy | JWT",
         "github": "https://github.com/bharathkumar7492/fastapi-task-manager"
     },
+    
     {
         "name":"Employee Leave Management API",
         "description": "A backend application for managing employee leave requests with role based access control for employees, managers and administrators.",
         "technologies": "Python | FastAPI | MySQL | SQLAlchemy | JWT",
         "github": "https://github.com/bharathkumar7492/employee-leave-management-api"
     },
+    
+    {
+        "name":"Developer Portfoliio Website",
+        "description": "A personal portfolio website showcasing my skills, projects, education, and experience, with a contact form that stores messages in MySQL.",
+        "technologies": "Python | FastAPI | Jinja2 | Bootstrap 5 | MySQL | SQLAlchemy",
+        "github": "https://github.com/bharathkumar7492/developer-portfolio"
+    },
+    
     {
         "name":"Expense Tracker",
         "description": "A desktop application for recording, managing and tracking personal expenses with database integration.",
@@ -38,5 +47,5 @@ projects = [
         "description": "A simple Python banking application where users can create an account, log in, deposit money, withdraw money, and check their balance.",
         "technologies": "Python | Dictionaries | Functions | Loops",
         "github": "https://github.com/bharathkumar7492/Banking-Program-Project"
-    },
+    }
 ]
