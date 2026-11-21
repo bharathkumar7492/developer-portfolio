@@ -46,8 +46,9 @@ developer_portfolio/
 1. Clone the repository.
 2. Create and activate a virtual environment.
 3. Install dependencies:
-   
+   ```text
    pip install -r requirements.txt
+   ```
 4. Create a MySQL database named developer_portfolio.
 5. Create a .env file using .env.example and configure your database URL.
 6. Run the application:
