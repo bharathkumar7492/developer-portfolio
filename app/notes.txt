@@ -1,2 +1,23 @@
 FastAPI requires python-multipart to process HTML form submissions using Form(...).
 pip install python-multipart
+
+
+----------------------------------------------
+CLOUD DB :
+
+# TiDB Cloud:
+# DATABASE_URL = DATABASE_URL=mysql+pymysql://{YOUR_USERNAME}:{YOUR_PASSWORD}@{YOUR_HOST}:4000/developer_portfolio?ssl_verify_cert=true&ssl_verify_identity=true
+
+- replace this this in .env
+- Your .env now points to the TiDB Cloud database instead of local MySQL.
+
+- After connecting One important setting for TiDB Starter: idle connections can close after five minutes.
+ We'll configure SQLAlchemy to refresh connections safely.
+
+- so Update app/database.py :
+
+ engine = create_engine(
+    DATABASE_URL,
+    pool_recycle=300,
+    pool_pre_ping=True
+)

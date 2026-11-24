@@ -24,7 +24,7 @@ projects = [
     },
     
     {
-        "name":"Developer Portfoliio Website",
+        "name":"Developer Portfolio Website",
         "description": "A personal portfolio website showcasing my skills, projects, education, and experience, with a contact form that stores messages in MySQL.",
         "technologies": "Python | FastAPI | Jinja2 | Bootstrap 5 | MySQL | SQLAlchemy",
         "github": "https://github.com/bharathkumar7492/developer-portfolio"
